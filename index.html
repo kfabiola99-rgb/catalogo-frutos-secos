@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Catálogo — Frutos secos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="header-brand">
+          <span class="header-mark" aria-hidden="true"></span>
+          <h1>Frutos secos</h1>
+        </div>
+        <p class="header-tagline">Clic en la ficha para descripción</p>
+      </div>
+    </header>
+
+    <main id="catalogo" class="catalogo" aria-live="polite"></main>
+
+    <div
+      id="modal-overlay"
+      class="modal-overlay"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-titulo"
+    >
+      <div class="modal" role="document">
+        <button
+          type="button"
+          class="modal-cerrar"
+          id="modal-cerrar"
+          aria-label="Cerrar"
+        >
+          Cerrar
+        </button>
+        <img id="modal-img" class="modal-img" src="" alt="" />
+        <div class="modal-contenido">
+          <h2 id="modal-titulo"></h2>
+          <div id="modal-precio" class="precio"></div>
+          <p id="modal-desc"></p>
+          <a
+            id="modal-wa"
+            class="btn-wa"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            >WhatsApp</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
