@@ -1,5 +1,5 @@
 /**
- * Catálogo — dos líneas: valor por kg y 250 gr ziploc.
+ * Catálogo — por kg, luego 500 gr ziploc, luego 250 gr ziploc.
  *
  * Fotos en /images (una por presentación):
  *   nuez-mariposa-1kg.jpeg / nuez-mariposa-250g.jpeg
@@ -8,6 +8,10 @@
  *   pasas-uvas-1kg.jpeg / pasas-uvas-250g.jpeg
  *   mix-mediterraneo-1kg.jpeg / mix-mediterraneo-250g.jpeg
  *   mix-salado-1kg.jpeg / mix-salado-250g.jpeg
+ *   mix-tropical-1kg.jpeg
+ *   mix-premiun-1kg.jpeg
+ *   mix-cervecero-1kg.jpeg
+ *   mix-granola-500grs.jpeg
  */
 window.PRODUCTOS = [
   /* ——— Valor por kg ——— */
@@ -27,7 +31,7 @@ window.PRODUCTOS = [
   },
   {
     titulo: "Castaña de cajú Vietnam (por kg)",
-    precio: 19000,
+    precio: 21000,
     imagen: "images/castaña-caju-vietnam-1kg.jpeg",
     descripcion:
       "Castañas de cajú origen Vietnam.\n\nValor por kg.",
@@ -40,18 +44,48 @@ window.PRODUCTOS = [
       "Pasas de uvas.\n\nValor por kg.",
   },
   {
-    titulo: "Mix mediterráneo (por kg)",
+    titulo: "Mix energético (por kg)",
     precio: 17000,
     imagen: "images/mix-mediterraneo-1kg.jpeg",
     descripcion:
       "Nueces, almendras, castañas de cajú, pasas de uva negras y rubias, maní.\n\nValor por kg.",
   },
   {
+    titulo: "Mix tropical (por kg)",
+    precio: 17000,
+    imagen: "images/mix-tropical-1kg.jpeg",
+    descripcion:
+      "Castaña de cajú, almendras, nuez, pasas de uva, maní, banana.\n\nValor por kg.",
+  },
+  {
+    titulo: "Mix premium (por kg)",
+    precio: 19000,
+    imagen: "images/mix-premiun-1kg.jpeg",
+    descripcion:
+      "Nuez, castaña de cajú, almendra, pasas de uva rubias y negras.\n\nValor por kg.",
+  },
+  {
+    titulo: "Mix cervecero (por kg)",
+    precio: 9000,
+    imagen: "images/mix-cervecero-1kg.jpeg",
+    descripcion:
+      "Maíz frito, maní salado y nuez saborizada.\n\nValor por kg.",
+  },
+  {
     titulo: "Mix salado (por kg)",
     precio: 17000,
     imagen: "images/mix-salado-1kg.jpeg",
     descripcion:
-      "Semillas de zapallo, almendras, pasas de uva rubias, maíz frito, castañas de cajú saladas, maní salado.\n\nValor por kg.",
+      "Semilla de zapallo, almendra, pasas rubias y morenas, maíz frito, maní y castañas.\n\nValor por kg.",
+  },
+
+  /* ——— Valor por 500 gr · ziploc ——— */
+  {
+    titulo: "Mix granola — 500 gr ziploc",
+    precio: 4000,
+    imagen: "images/mix-granola-500grs.jpeg",
+    descripcion:
+      "Mix granola.\n\nValor por 500 gr embalaje ziploc.",
   },
 
   /* ——— Valor por 250 gr · ziploc ——— */

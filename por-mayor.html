@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Catálogo — Frutos secos</title>
+    <title>Catálogo por mayor — Frutos secos</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -15,10 +15,13 @@
             <h1>Frutos secos</h1>
           </div>
           <nav class="site-nav" aria-label="Catálogo">
-            <a href="index.html" class="site-nav-link is-active" aria-current="page"
-              >Al detalle</a
+            <a href="index.html" class="site-nav-link">Al detalle</a>
+            <a
+              href="por-mayor.html"
+              class="site-nav-link is-active"
+              aria-current="page"
+              >Por mayor</a
             >
-            <a href="por-mayor.html" class="site-nav-link">Por mayor</a>
           </nav>
         </div>
         <p class="header-tagline">Clic en la ficha para descripción</p>
@@ -61,7 +64,10 @@
       </div>
     </div>
 
-    <script src="products.js"></script>
+    <script>
+      window.CATALOGO_OPTS = { whatsappEnCard: false };
+    </script>
+    <script src="products-mayor.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

@@ -1,5 +1,12 @@
 const WHATSAPP_NUMERO = "5493513868459";
 
+const catalogoOpts = Object.assign(
+  { whatsappEnCard: true },
+  typeof window.CATALOGO_OPTS === "object" && window.CATALOGO_OPTS !== null
+    ? window.CATALOGO_OPTS
+    : {}
+);
+
 function formatoPrecio(n) {
   return new Intl.NumberFormat("es-AR", {
     style: "currency",
@@ -58,6 +65,10 @@ function renderCatalogo() {
       `Ver detalle de ${p.titulo}`
     );
 
+    const waCard = catalogoOpts.whatsappEnCard
+      ? `<a class="btn-wa" href="${escapeAttr(urlWhatsApp(p.titulo))}" target="_blank" rel="noopener noreferrer">WhatsApp</a>`
+      : "";
+
     article.innerHTML = `
       <div class="card-img-wrap">
         <img src="${escapeAttr(p.imagen)}" alt="" loading="lazy" width="600" height="450" />
@@ -65,7 +76,7 @@ function renderCatalogo() {
       <div class="card-body">
         <h2>${escapeHtml(p.titulo)}</h2>
         <span class="precio">${formatoPrecio(p.precio)}</span>
-        <a class="btn-wa" href="${escapeAttr(urlWhatsApp(p.titulo))}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        ${waCard}
       </div>
     `;
 
@@ -83,7 +94,7 @@ function renderCatalogo() {
     });
 
     const btnWa = article.querySelector(".btn-wa");
-    btnWa.addEventListener("click", (e) => e.stopPropagation());
+    if (btnWa) btnWa.addEventListener("click", (e) => e.stopPropagation());
 
     root.appendChild(article);
   });
