@@ -62,7 +62,7 @@ function renderCatalogo() {
     article.setAttribute("role", "button");
     article.setAttribute(
       "aria-label",
-      `Ver detalle de ${p.titulo}`
+      `Ver ficha de ${p.titulo}`
     );
 
     const waCard = catalogoOpts.whatsappEnCard

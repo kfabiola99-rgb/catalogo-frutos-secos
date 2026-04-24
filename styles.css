@@ -76,10 +76,20 @@ body {
   gap: 0.65rem;
 }
 
+.header-nav-block {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-shrink: 0;
+  min-width: min(100%, 220px);
+}
+
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 0.35rem;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
   flex-shrink: 0;
 }
 
@@ -112,7 +122,7 @@ body {
 
 .header-mark {
   width: 4px;
-  height: 1.35rem;
+  height: 2rem;
   border-radius: 2px;
   background: linear-gradient(180deg, var(--gold), var(--accent));
   flex-shrink: 0;
@@ -120,7 +130,7 @@ body {
 
 .site-header h1 {
   margin: 0;
-  font-size: 1rem;
+  font-size: clamp(1.2rem, 2.8vw, 1.55rem);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -134,6 +144,41 @@ body {
   font-size: 0.78rem;
   letter-spacing: 0.02em;
   max-width: 100%;
+  line-height: 1.35;
+}
+
+/* Etiqueta bajo el header, sobre el catálogo */
+.catalogo-label-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem 0.35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.catalogo-label {
+  margin: 0;
+  padding: 0.5rem 1.35rem;
+  max-width: 100%;
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fffefb;
+  line-height: 1.35;
+  background: linear-gradient(
+    165deg,
+    #e0784a 0%,
+    var(--accent) 42%,
+    #a34725 100%
+  );
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.2) inset,
+    0 4px 14px rgba(162, 71, 37, 0.35);
 }
 
 @media (max-width: 520px) {
@@ -142,13 +187,23 @@ body {
     align-items: flex-start;
   }
 
+  .header-nav-block {
+    width: 100%;
+    min-width: 0;
+  }
+
   .site-nav {
     width: 100%;
   }
 
   .site-nav-link {
-    flex: 1;
+    flex: 0 1 auto;
     text-align: center;
+  }
+
+  .catalogo-label-wrap {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 }
 
